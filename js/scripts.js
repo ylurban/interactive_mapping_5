@@ -56,12 +56,8 @@ d3.csv("data/bar-data.csv", function(d) {
       .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
       .on("mouseout", function(){return tooltip.style("visibility", "hidden");})
       // .on('click', function(d) {    
-      //   //alert(d.business)  
-      //   if (feature.properties.name == d.business){
-
-      //   }
-
-      })
+      //    //alert(d.business)  
+      //    })
 });
 
       
@@ -79,14 +75,6 @@ var tooltip = d3.select("body")
     .text("a simple tooltip");
 
 //Creat change of style, when click on D3 chart, change color of geojson polygons with same business name:
-
-
-
-
-
-
-
-
 
 
 
