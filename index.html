@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<title>Inspection Visualization</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  
+  
+</head>
+<body>
+
+<!-- boostrap navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">NYC Inspector</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">About <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Data</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inspections <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Health and Sanitation</a></li>
+            <li><a href="#">Building Condition</a></li>
+            <li><a href="#">Fire Safty</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Github Page</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Research Team</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Methodology</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- bootstrap ends -->
+
+
+	<h1>Mapping Fast Food Chain Store Quality in Manhattan</h1>
+	<div id="map"></div>
+<div id="sidebar">
+    Which food brand is more likily (%) not getting A?
+    <!-- Start: D3 chart -->
+    <svg width="620" height="400"></svg>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+ 	<!-- End: D3 chart -->
+
+
+	<style>
+		body {
+		  overflow: hidden;
+		  margin: 0;
+		  font-size: 14px;
+		  font-family: "Helvetica Neue", Helvetica;
+		}
+
+		}	
+	</style>
+  </div>
+  <p>Interactive data visualization on health inspection grading of fast food chain stores (no. store > 3). The map visualizes each store with its total number of documented inspections and percentage of getting a 'A'. Left bar chart is a aggregated statistics by brand indicating which fast foot brand most likely to fail in an health inspection. Data Source: Restaurant inspection data (2015) by Department of Health and Mental Hygiene (DOHMH) and MapPLUTO data (2016) by Department of City Planning (DCP), New York City. Created by Yuan Lai, Center for Urban Science and Progress (CUSP), New York University.</p>
+
+
+ <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+ <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+ <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="js/fast_rest.js"></script>
+ <script src="js/scripts.js"></script>
+
+</body>
+</html>
